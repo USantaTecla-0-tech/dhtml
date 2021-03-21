@@ -13,7 +13,7 @@
     }
 
     function onCopy(event){
-      console.log("Event:" + event.type);
+      console.log("Evento: " + event.type);
     }
 
     function onMouseEnter(event){
@@ -21,14 +21,15 @@
     }
 
     function onBlur(event, input){
-      console.log("Evento: " + event.type + " de " + input.name 
-        + " con " + input.value);
+      console.log("Evento: " + event.type + " de " 
+        + input.name + " con " + input.value);
     }
 
     function onClick(event, button){
-      console.log("Evento: " + event.type + " con " + button.value);
+      console.log("Evento: " + event.type + " con " 
+        + button.value);
       let body = document.getElementById("body");
-      if (button.value=="Atender al tampón del teclado"){
+      if (button.value=="Atender al tampón del teclado") {
         button.value = "No atender al tampón del teclado";
         body.addEventListener("copy", onCopy);
       } else {
@@ -37,15 +38,12 @@
       }
     }
 
-    function onCopy(event){
-      console.log("Evento: " + event.type);
-    }
-
     function onSubmit(event, form){
-      let equals = document.getElementById("fieldA").value ==
-        document.getElementById("fieldB").value;
+      let equals = document.getElementById("fieldA").value 
+        == document.getElementById("fieldB").value;
       if (equals) {
-        form.action = "https://" + document.getElementById("fieldA").value;
+        form.action = "https://" 
+          + document.getElementById("fieldA").value;
       } 
       console.log("Evento: " + event.type);    
       return equals;
@@ -56,7 +54,7 @@
   <body id="body" onload="onLoad(event)">
     <!-- código establecido estáticamente -->
     <h1 id="title" onmouseleave=
-      "javascript:console.log('Evento: ' + event.type); console.log('Evento: ' + event.type);">
+      "javascript: console.log('Evento: ' + event.type); console.log('Evento: ' + event.type);">
         Titulo con foco!!!</h1>
     <!-- validacion/accion del submit: con return!!! -->
     <form id="form"  method="POST"
